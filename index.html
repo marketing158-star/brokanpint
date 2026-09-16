@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BADSHAH BROKING - EDUCATIONAL COMMUNITY</title>
+    <title>BADSHAH BROKING
+</title>
 
-    <!-- Meta Pixel Code -->
+    <!-- ========================================== -->
+    <!-- 1. META PIXEL & TRACKING CODE (START) -->
+    <!-- ========================================== -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,496 +19,330 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       
-      fbq('init', '998132819916158'); 
+      // Facebook Pixel ID
+      fbq('init', '2510065176123628'); 
+      
+      // PageView Event
       fbq('track', 'PageView');
     </script>
     <noscript>
       <img height="1" width="1" style="display:none"
-           src="https://www.facebook.com/tr?id=998132819916158&ev=PageView&noscript=1" alt=""/>
+           src="https://www.facebook.com/tr?id=2510065176123628&ev=PageView&noscript=1"/>
     </noscript>
+    <!-- ========================================== -->
+    <!-- META PIXEL CODE (END) -->
+    <!-- ========================================== -->
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            background: #030712;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+            background-color: #020b08;
             color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px 15px;
+            padding: 15px;
         }
 
-        /* Glassmorphism Card */
+        /* Outer Glow Border Container */
         .card-container {
             width: 100%;
             max-width: 420px;
-            background: rgba(17, 24, 39, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 28px 22px;
+            background: linear-gradient(180deg, #051a14 0%, #030d0a 100%);
+            border: 2px solid #00f5a0;
+            border-radius: 36px;
+            padding: 35px 18px 25px 18px;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 245, 160, 0.35), inset 0 0 20px rgba(0, 245, 160, 0.15);
         }
 
-        /* Top Glow Accent */
-        .card-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
-        }
-
-        /* Top Badges */
-        .top-badges {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 22px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.8px;
-        }
-
-        .badge-live {
-            color: #10b981;
-            background: rgba(16, 185, 129, 0.1);
-            padding: 5px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .badge-live::before {
-            content: '';
-            width: 7px;
-            height: 7px;
-            background-color: #10b981;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #10b981;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(1.2); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        .badge-verified {
-            color: #9ca3af;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 5px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Profile Image */
+        /* Profile Image Section */
         .profile-sec {
             display: flex;
             justify-content: center;
             margin-bottom: 18px;
-            position: relative;
         }
 
         .profile-box {
-            width: 110px;
-            height: 110px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            padding: 3px;
-            background: linear-gradient(135deg, #10b981, #3b82f6);
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+            border: 3px solid #00f5a0;
+            overflow: hidden;
+            box-shadow: 0 0 20px #00f5a0;
+            background-color: #000;
         }
 
         .profile-box img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             object-fit: cover;
-            background-color: #000;
         }
 
-        /* Tagline & Main Name */
-        .sub-tag {
-            font-size: 11px;
-            color: #10b981;
-            letter-spacing: 2px;
-            font-weight: 800;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-        }
-
+        /* Name Title */
         .main-name {
-            font-size: 28px;
+            font-size: 25px;
             font-weight: 900;
-            line-height: 1.1;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 16px;
             color: #ffffff;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
         }
 
-        .main-name span {
-            background: linear-gradient(135deg, #10b981, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: block;
-        }
-
+        /* Sub-description */
         .sub-desc {
-            font-size: 13px;
-            color: #9ca3af;
+            font-size: 13.5px;
+            color: #cbd5e1;
             line-height: 1.5;
             margin-bottom: 22px;
+            font-weight: 500;
         }
 
-        /* Stats Section */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+        /* Stats 3-Box Row */
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .stat-card {
+            flex: 1;
+            background-color: rgba(6, 32, 24, 0.7);
+            border: 1px solid rgba(0, 245, 160, 0.25);
             border-radius: 16px;
-            padding: 14px 8px;
-            margin-bottom: 18px;
+            padding: 12px 5px;
+            text-align: center;
         }
 
-        .stat-item h3 {
-            font-size: 16px;
+        .stat-card .val {
+            font-size: 17px;
             font-weight: 800;
-            color: #ffffff;
+            color: #00f5a0;
+            margin-bottom: 3px;
         }
 
-        .stat-item p {
-            font-size: 10px;
-            color: #6b7280;
-            letter-spacing: 0.5px;
-            margin-top: 2px;
-            font-weight: 700;
+        .stat-card .lbl {
+            font-size: 11.5px;
+            color: #94a3b8;
+            font-weight: 600;
         }
 
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+        /* 2x2 Features Grid */
+        .grid-row {
+            display: flex;
+            justify-content: space-between;
             gap: 10px;
             margin-bottom: 22px;
         }
 
-        .feature-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 12px;
-            padding: 10px 8px;
+        .grid-card {
+            flex: 1;
+            background-color: rgba(6, 32, 24, 0.7);
+            border: 1px solid rgba(0, 245, 160, 0.25);
+            border-radius: 16px;
+            padding: 14px 10px;
+            text-align: left;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 6px;
-            font-size: 11px;
-            font-weight: 700;
-            color: #e5e7eb;
+            gap: 10px;
         }
 
-        /* Telegram Button */
+        .grid-card span {
+            font-size: 18px;
+        }
+
+        .grid-card p {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        /* Main Join Button */
         .join-btn {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 8px;
             width: 100%;
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-            padding: 12px 18px;
-            border-radius: 50px;
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            background: linear-gradient(135deg, #00f5a0 0%, #00d9f5 100%);
+            color: #030d0a;
+            font-size: 17px;
+            font-weight: 900;
             text-decoration: none;
-            margin-bottom: 15px;
-            transition: all 0.3s ease;
-            animation: btnGlow 2s infinite alternate;
+            padding: 16px;
+            border-radius: 50px;
+            box-shadow: 0 0 25px rgba(0, 245, 160, 0.4);
+            letter-spacing: 0.5px;
+            transition: transform 0.2s;
             cursor: pointer;
-        }
-
-        @keyframes btnGlow {
-            0% { box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4); }
-            100% { box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6); }
-        }
-
-        .join-btn:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
+            margin-bottom: 20px;
         }
 
         .join-btn:active {
             transform: scale(0.98);
         }
 
-        .btn-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-align: left;
-        }
-
-        .btn-icon {
-            width: 38px;
-            height: 38px;
-            background: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #2563eb;
-        }
-
-        .btn-text .sub {
-            font-size: 9px;
-            color: #bfdbfe;
-            letter-spacing: 1px;
-            font-weight: 800;
-        }
-
-        .btn-text .title {
-            font-size: 14px;
-            font-weight: 900;
-            letter-spacing: 0.5px;
-            color: #ffffff;
-        }
-
-        .btn-arrow {
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .slots-text {
-            font-size: 10px;
-            color: #10b981;
-            letter-spacing: 1px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        /* Quote & Agency Badge */
-        .quote-text {
-            font-size: 13px;
-            color: #d1d5db;
-            margin-bottom: 16px;
-            line-height: 1.5;
-            font-style: italic;
-        }
-
-        .ad-badge {
-            border: 1px dashed rgba(255, 255, 255, 0.15);
-            border-radius: 8px;
-            padding: 8px;
-            font-size: 11px;
-            color: #6b7280;
-            margin-bottom: 16px;
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-
-        .agency-link {
-            color: #10b981;
-            font-weight: 700;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .agency-link:hover {
-            color: #34d399;
-        }
-
-        /* Disclaimer Section */
+        /* Risk Disclaimer Box */
         .disclaimer-box {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 12px;
+            background-color: rgba(30, 10, 10, 0.6);
+            border: 1px solid rgba(255, 68, 68, 0.3);
+            border-radius: 16px;
+            padding: 14px;
             text-align: left;
-            font-size: 10px;
-            color: #6b7280;
-            line-height: 1.5;
+            margin-bottom: 15px;
         }
 
         .disclaimer-title {
-            color: #f59e0b;
-            font-weight: 700;
-            margin-bottom: 4px;
+            color: #ff4d4d;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 5px;
         }
 
-        .footer-links {
-            font-size: 10px;
-            color: #4b5563;
-            margin-top: 16px;
+        .disclaimer-text {
+            color: #b0b0b0;
+            font-size: 11.5px;
             line-height: 1.5;
+        }
+
+        /* Agency Footer Bar */
+        .agency-bar {
+            border: 1px solid rgba(0, 245, 160, 0.3);
+            border-radius: 50px;
+            padding: 10px;
+            font-size: 13px;
+            color: #ffffff;
+            background-color: rgba(2, 20, 14, 0.5);
+        }
+
+        .agency-bar a {
+            color: #00f5a0;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .agency-bar a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
     <div class="card-container">
-        
-        <!-- Top Badges -->
-        <div class="top-badges">
-            <span class="badge-live">STOCK EDUCATION</span>
-            <span class="badge-verified">COMMUNITY</span>
-        </div>
 
         <!-- Profile Image -->
         <div class="profile-sec">
             <div class="profile-box">
-                <img src="profile.png" alt="BADSHAH BROKING">
+                <img src="profile.png" alt="Profile Image">
             </div>
         </div>
 
-        <!-- Title Section -->
-        <div class="sub-tag">Stock Market Learning Hub</div>
-        <div class="main-name">
-            BADSHAH BROKING
-            <span>(OFFICIAL)</span>
-        </div>
+        <!-- Name Title -->
+        <div class="main-name">BADSHAH BROKING
+</div>
 
-        <!-- Sub Description -->
+        <!-- Sub Title / Analysis Info -->
         <div class="sub-desc">
-            Educational Stock Market Insights, Chart Analysis & Trading Concepts — directly on Telegram.
+            Fast & Accurate Market Analysis •<br>Nifty • Bank Nifty • Options Trading
         </div>
 
-        <!-- Stats Grid -->
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h3>80K+</h3>
-                <p>MEMBERS</p>
+        <!-- 3 Stats Boxes -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="val">10K+</div>
+                <div class="lbl">Members</div>
             </div>
-            <div class="stat-item">
-                <h3>DAILY</h3>
-                <p>UPDATES</p>
+            <div class="stat-card">
+                <div class="val">DAILY</div>
+                <div class="lbl">Updates</div>
             </div>
-            <div class="stat-item">
-                <h3>CHARTS</h3>
-                <p>ANALYSIS</p>
+            <div class="stat-card">
+                <div class="val">FREE</div>
+                <div class="lbl">Join</div>
             </div>
         </div>
 
-        <!-- Features Grid -->
-        <div class="features-grid">
-            <div class="feature-card">⚡ Market Insights</div>
-            <div class="feature-card">📈 Chart Analysis</div>
-            <div class="feature-card">🛡️ Risk Mgmt</div>
-            <div class="feature-card">🎓 Educational</div>
+        <!-- 2x2 Feature Grid -->
+        <div class="grid-row">
+            <div class="grid-card">
+                <span>📈</span>
+                <p>Nifty Calls</p>
+            </div>
+            <div class="grid-card">
+                <span>🏦</span>
+                <p>Bank Nifty</p>
+            </div>
         </div>
 
-        <!-- Telegram Button -->
-        <a id="telegramLink" href="javascript:void(0);" onclick="trackButtonClick()" class="join-btn">
-            <div class="btn-left">
-                <div class="btn-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-                    </svg>
-                </div>
-                <div class="btn-text">
-                    <div class="sub">JOIN FREE EDUCATIONAL</div>
-                    <div class="title">TELEGRAM CHANNEL</div>
-                </div>
+        <div class="grid-row" style="margin-bottom: 25px;">
+            <div class="grid-card">
+                <span>💹</span>
+                <p>Finnifty</p>
             </div>
-            <div class="btn-arrow">→</div>
+            <div class="grid-card">
+                <span>📊</span>
+                <p>Swing Trades</p>
+            </div>
+        </div>
+
+        <!-- Main Join Telegram Button -->
+        <a id="telegramLink" class="join-btn" onclick="trackButtonClick()">
+            🚀 JOIN TELEGRAM FREE
         </a>
 
-        <div class="slots-text">● FREE EDUCATIONAL ACCESS</div>
-
-        <!-- Hindi Quote -->
-        <div class="quote-text">
-            "नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।"
-        </div>
-
-        <!-- Agency Tag -->
-        <div class="ad-badge">
-            This Channel Advertised By <a id="agencyLink" class="agency-link" href="javascript:void(0);" onclick="trackAgencyClick()">ELITE MARKETING AGENCY</a>
-        </div>
-
-        <!-- Disclaimer -->
+        <!-- Risk Disclaimer & Policy Box -->
         <div class="disclaimer-box">
-            <div class="disclaimer-title">⚠️ DISCLAIMER</div>
-            BADSHAH BROKING provides stock market education, chart analysis, and market information for educational purposes only. We are not SEBI registered and do not offer financial, investment, or paid trading tips.
+            <div class="disclaimer-title">
+                ⚠️ RISK DISCLAIMER & POLICY
+            </div>
+            <div class="disclaimer-text">
+                Stock market and Options trading (F&O) involve high financial risk. 90% of individual traders in F&O incur losses. The content shared on this channel is for educational and research purposes only. Please consult your Financial Advisor before investing or trading.
+            </div>
         </div>
 
-        <!-- Footer Links -->
-        <div class="footer-links">
-            Terms | Privacy | Disclaimer<br>
-            This site is not part of Facebook™ or endorsed by Facebook™.
+        <!-- Agency Credit Footer -->
+        <div class="agency-bar">
+            This Channel Advertise By <a href="https://t.me/+mp524qElHEQ2YWU1" target="_blank">elite marketing Agency</a>
         </div>
 
     </div>
 
-    <!-- JavaScript - Single Click Tracking Logic -->
+    <!-- JavaScript - Pixel Tracking & Single Click Prevention -->
     <script>
-        var isMainClicked = false;
-        var isAgencyClicked = false;
+        var isClicked = false; 
+        var telegramUrl = "https://t.me/+3NQqq61EIEIyMDRl"; 
 
-        var mainTelegramUrl = "https://t.me/+3NQqq61EIEIyMDRl";
-        var agencyTelegramUrl = "https://t.me/+mp524qElHEQ2YWU1";
-
-        // Main Channel Button Handler
         function trackButtonClick() {
-            if (!isMainClicked) {
-                isMainClicked = true;
+            if (!isClicked) {
+                isClicked = true;
 
+                // 1. Facebook Pixel Events
                 if (typeof fbq !== 'undefined') {
                     fbq('trackCustom', 'TelegramBtnClick'); 
                     fbq('track', 'Subscribe'); 
                 }
 
+                // 2. Visually disable button
                 var btn = document.getElementById('telegramLink');
                 if (btn) {
                     btn.style.pointerEvents = 'none';
                     btn.style.opacity = '0.7';
                 }
 
+                // 3. Redirect to Telegram
                 setTimeout(function() {
-                    window.location.href = mainTelegramUrl;
-                }, 300);
-            }
-        }
-
-        // Agency Link Click Handler
-        function trackAgencyClick() {
-            if (!isAgencyClicked) {
-                isAgencyClicked = true;
-
-                if (typeof fbq !== 'undefined') {
-                    fbq('trackCustom', 'AgencyLinkClick');
-                }
-
-                var link = document.getElementById('agencyLink');
-                if (link) {
-                    link.style.pointerEvents = 'none';
-                    link.style.opacity = '0.7';
-                }
-
-                setTimeout(function() {
-                    window.location.href = agencyTelegramUrl;
+                    window.location.href = telegramUrl;
                 }, 300);
             }
         }
